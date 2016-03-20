@@ -1,0 +1,13 @@
+#!/bin/ash /etc/rc.common
+
+START=99
+
+start() {
+	sleep 5   # make sure boot process is done, no more console msgs
+	echo "eth0 net determine box"
+	python /root/routerMoniter/main.py 
+}
+
+stop() {
+	kill -9 `ps | grep "python /root/routerMoniter/main.py" | awk '{if(NR==1)print$1}'`
+}
