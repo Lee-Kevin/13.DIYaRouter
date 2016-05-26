@@ -13,6 +13,7 @@ config interface 'wan'
 	  option ifname 'eth0'
 	  option proto 'dhcp'
 </pre>
+* Press the WiFi Reset Button for at least 5 seconds and release, then connect to Linkit 7688 AP, now your board can be used as a router 
 * First you need to enable yunbridge 
 <pre>
 > uci set yunbridge.config.disabled='0'
